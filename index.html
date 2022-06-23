@@ -1,30 +1,32 @@
-<!doctype html>
-<html lang="en">
+
+<!DOCTYPE html>
+<html lang="ja">
   <head>
-    <title>&lt;model-viewer&gt; template</title>
     <meta charset="utf-8">
-    <meta name="description" content="&lt;model-viewer&gt; template">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" href="./styles.css" rel="stylesheet"/>
-    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
-    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+    <title>ModerlViewerを使ったWebARページ</title>
   </head>
   <body>
-    <!-- <model-viewer> HTML element -->
-    <P>
-    <model-viewer bounds="tight" enable-pan src="Suit_Canali_Suit-only_02.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1" exposure="1">
-      <div class="progress-bar hide" slot="progress-bar">
-          <div class="update-bar"></div>
-      </div>
-      <button slot="ar-button" id="ar-button">
-          View in your space
-      </button>
-      <div id="ar-prompt">
-          <img src="ar_hand_prompt.png">
-      </div>
-    </model-viewer>  
-    <script src="script.js"></script>
-    <!-- Loads <model-viewer> for browsers: -->
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script 
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
+
+  </script>
+
+    <model-viewer  
+    ar
+    alt="Leoモデル"
+    src="Suit_Canali_Suit-only_02.glb" 
+    ios-src="leo.usdz" 
+
+    style="width:800px;height:1000px;"                  
+
+    background-color="#70BCD1"
+    shadow-intensity="0.7"
+    camera-controls
+    interaction-prompt="auto"
+    auto-rotate ar magic-leap>
+
+
+    </model-viewer>
   </body>
 </html>
