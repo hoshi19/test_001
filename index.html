@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>test_page</title>
+    <title>&lt;model-viewer&gt; template</title>
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,8 +11,41 @@
   </head>
   <body>
     <!-- <model-viewer> HTML element -->
-    <model-viewer src="Rivage Easy Chair_model-viewer_ver2022_detouch_04.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1"> </model-viewer>
+    <model-viewer src="test_230203.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script>
+const modelViewerVariants = document.querySelector("model-viewer#shoe");
+const select = document.querySelector('#variant');
+
+modelViewerVariants.addEventListener('load', () => {
+  const names = modelViewerVariants.availableVariants;
+  for (const name of names) {
+    const option = document.createElement('option');
+    option.value = name;
+    option.textContent = name;
+    select.appendChild(option);
+  }
+  // Adds a default option.
+  const option = document.createElement('option');
+    option.value = 'default';
+    option.textContent = 'Default';
+    select.appendChild(option);
+});
+
+select.addEventListener('input', (event) => {
+  modelViewerVariants.variantName = event.target.value === 'default' ? null : event.target.value;
+});
+</script>
   </body>
 </html>
