@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>&lt;model-viewer&gt; template6</title>
+    <title>&lt;model-viewer&gt; template7</title>
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,25 +44,6 @@ button {
   <div class="sidebar" id="sidenav"></div>
   <div id="toggle"></div>
 
-  <div class="examples-container">
-    <div class="sample">
-      <div id="variants" class="demo"></div>
-      <div class="content">
-        <div class="wrapper">
-          <div class="heading">
-            <h2 class="demo-title">Swap Model Variants</h2>
-            <p>This demonstrates the use of the glTF <a
-            href="https://www.khronos.org/blog/streamlining-3d-commerce-with-material-variant-support-in-gltf-assets">materials
-            variants extension</a> which allows multiple materials and textures
-            to be packed with a single geometry in a GLB. Our API exposes these
-            variant names as <code>availableVariants</code> and you can select
-            one using the <code>variantName</code> attribute. This is similar
-            functionality to the lower-level scene-graph API below, but in that
-            case it is up to you to choose the right texture URL, rather than
-            having that information stored in the GLB. <i>Note: setting <code>variantName</code>
-            to <code>null</code> reverts to the initial material.</i></p>
-          </div>
-          <example-snippet stamp-to="variants" highlight-as="html">
             <template>
 <model-viewer id="shoe" camera-controls touch-action="pan-y" src="MaterialsVariantsShoe.glb" ar alt="A 3D model of a Shoe">
   <div class="controls">
