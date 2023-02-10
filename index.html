@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>&lt;model-viewer&gt; template2</title>
+    <title>&lt;model-viewer&gt; template3</title>
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
     <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+  <script src="focus-visible.js" defer></script>
   <script>
     window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
     ga('create', 'UA-169901325-1', { 'storage': 'none' });
@@ -15,6 +16,28 @@
     ga('send', 'pageview');
   </script>
   <script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  <style>
+.controls {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  bottom: 8px;
+  left: 8px;
+}
+
+#texture-name,
+#image-name {
+  font-size: 0.8em;
+}
+
+button {
+  font-size: 1.3em;
+  margin: 0 0.25em;
+}
+  </style>
+
   </head>
   <body>
 <model-viewer id="shoe" camera-controls touch-action="pan-y" src="MaterialsVariantsShoe.glb" ar alt="A 3D model of a Shoe">
