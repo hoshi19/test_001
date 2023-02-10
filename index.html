@@ -31,6 +31,11 @@ button {
   </head>
   <body>
     <!-- <model-viewer> HTML element -->
+        <style>
+            .box select{
+              width: 100px;
+            }
+        </style>
     <model-viewer id="shoe" src="MaterialsVariantsShoe.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" ar alt="A 3D model of a Shoe">
   <div class="controls">
     <div>Variant: <select id="variant"></select></div>
