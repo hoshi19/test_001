@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>&lt;model-viewer&gt; template5-1</title>
+    <title>&lt;model-viewer&gt; template5-2</title>
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,6 +54,11 @@ modelViewerVariants.addEventListener('load', () => {
     option.textContent = name;
     select.appendChild(option);
   }
+  // Adds a default option.
+  const option = document.createElement('option');
+    option.value = 'default';
+    option.textContent = 'Default';
+    select.appendChild(option);
 });
 
 </script>  
