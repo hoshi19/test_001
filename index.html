@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>&lt;model-viewer&gt; template5-4</title>
+    <title>&lt;model-viewer&gt; template5-5</title>
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,11 +56,12 @@ modelViewerVariants.addEventListener('load', () => {
   }
   // Adds a default option.
   const option = document.createElement('option');
-    option.value = 'default';
-    option.textContent = 'Default';
-    select.appendChild(option);
+
 });
 
+select.addEventListener('input', (event) => {
+  modelViewerVariants.variantName = event.target.value === 'default' ? null : event.target.value;
+});
 </script>  
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
