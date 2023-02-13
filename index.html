@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>&lt;model-viewer&gt; template4-5</title>
+    <title>&lt;model-viewer&gt; template5-1</title>
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,7 +31,7 @@ button {
   </head>
   <body>
     <!-- <model-viewer> HTML element -->
-    <model-viewer id="shoe" src="MaterialsVariantsShoe.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" ar alt="A 3D model of a Shoe">
+    <model-viewer id="tobira" src="test_hako_002.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" ar alt="A 3D model of a tobira">
   <div class="controls">
     <div>Variant: <select id="variant"></select></div>
   </div>
@@ -41,9 +41,9 @@ button {
       <div id="ar-prompt">
           <img src="ar_hand_prompt.png">
       </div>
-    </model-viewer>
+    </model-viewer>  
 <script>
-const modelViewerVariants = document.querySelector("model-viewer#shoe");
+const modelViewerVariants = document.querySelector("model-viewer#tobira");
 const select = document.querySelector('#variant');
 
 modelViewerVariants.addEventListener('load', () => {
